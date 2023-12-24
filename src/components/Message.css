@@ -1,0 +1,42 @@
+.message {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 8px 0;
+}
+
+.user-message {
+  justify-content: flex-end;
+  align-items: flex-end; /* Align user messages to the right */
+}
+
+.user-message .message-text {
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px 8px 0 8px;
+  padding: 10px;
+  text-align: right; /* Text alignment for user messages */
+}
+
+.other-message {
+  align-items: flex-start; /* Align other messages to the left */
+}
+
+.other-message .message-text {
+  background-color: #ccc;
+  color: black;
+  border-radius: 8px 8px 8px 0;
+  padding: 10px;
+  text-align: left; /* Text alignment for other messages */
+}
+
+.user-name {
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-align: right; /* Align the user name to the right for user messages */
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}

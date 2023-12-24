@@ -1,0 +1,34 @@
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Adapts based on screen size */
+  gap: 1rem; /* Space between cards */
+}
+
+.scrollable-dropdown {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-concert-button {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,20 @@
+{
+  "01": {
+    "artist": "First Last",
+    "date": "23-11-09",
+    "time": "11:00-11:50",
+    "location": "somewhere",
+    "genre": "music",
+    "num_attendees": 1,
+    "attendees": ["sdlfkjq"]
+  },
+  "02": {
+    "artist": "Car Cdr",
+    "date": "23-11-09",
+    "time": "22:00-22:30",
+    "location": "somewhere",
+    "genre": "noise",
+    "num_attendees": 2,
+    "attendees": ["sdlfkjq", "asdfghjkl"]
+  }
+}
