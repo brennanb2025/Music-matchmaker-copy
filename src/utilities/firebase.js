@@ -12,13 +12,13 @@ import { getDatabase, onValue, ref, update } from "firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD8KWlYFoo3ItJB1gkpE8jLsN77FmmI9S0",
-  authDomain: "music-matchmaker-392.firebaseapp.com",
-  databaseURL: "https://music-matchmaker-392-default-rtdb.firebaseio.com",
-  projectId: "music-matchmaker-392",
-  storageBucket: "music-matchmaker-392.appspot.com",
-  messagingSenderId: "176789524645",
-  appId: "1:176789524645:web:47bdd4a91a2a23ccaabd4c",
+  apiKey: "AIzaSyB4efqs-7mAlRiDLz1ojlgEayHVNukvoW4",
+  authDomain: "musicmatchmaker-74aeb.firebaseapp.com",
+  databaseURL: "https://musicmatchmaker-74aeb-default-rtdb.firebaseio.com",
+  projectId: "musicmatchmaker-74aeb",
+  storageBucket: "musicmatchmaker-74aeb.appspot.com",
+  messagingSenderId: "533691279259",
+  appId: "1:533691279259:web:ae54ea7873ded6509d233e"
 };
 
 // Initialize Firebase

@@ -2,6 +2,9 @@ import React from "react";
 import "./Message.css";
 
 const Message = ({ text, sender, user, userData }) => {
+  if (!user || !userData || !userData[sender]) {
+    return <div>Loading message data...</div>;
+  }
   const messageClass = sender === user.uid ? "user-message" : "other-message";
   const userDataInfo = userData[sender]["Info"];
 

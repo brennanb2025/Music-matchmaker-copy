@@ -6,6 +6,10 @@ const DateFilter = ({ setFilteredConcertsByDate, concerts }) => {
   const [endDate, setEndDate] = useState(''); // State for end date
 
   const handleDateFilter = () => {
+    if (startDate === '' && endDate === '') {
+      setFilteredConcertsByDate(Object.entries(concerts));
+      return;
+    }
     // Filter concerts based on the selected date range
     const filteredByDate = Object.entries(concerts).filter(([id, concert]) => {
       const concertDate = new Date(concert.date);

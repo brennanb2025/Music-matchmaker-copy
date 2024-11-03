@@ -1,4 +1,7 @@
 const ConcertAttendee = ({ concertInfo, userData }) => {
+  if (!concertInfo || !userData) {
+    return <div>Loading...</div>; // Or any fallback UI
+  }
   return (
     <div className="col-md-auto">
       <div className="card">

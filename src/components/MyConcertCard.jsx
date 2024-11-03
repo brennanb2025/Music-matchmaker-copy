@@ -12,12 +12,12 @@ const MyConcertCard = ({ concert, toggleSelectedConcert, attendeeInfo, concertId
             alt={concert.name}
         />
         <h5 className='card-title'>{concert.name}</h5>
-        <p className='card-text'>{dateFormat(concert.date)}</p>
-        <p className='card-text'>{timeFormat(concert.time)}</p>
+        <p className='card-text'>{dateFormat(concert.date)}, {timeFormat(concert.time)}</p>
         <p className='card-text'>{concert.location.venue}</p>
-        <p className="card-text">{concert.location.venue} 
+        {/* deleted maps integration */}
+        {/* <p className="card-text">{concert.location.venue} 
           <img src="/GoogleMaps-Icon.webp" className="map-icon" alt="image" onClick={() => toggleSelectedConcert(concert.location.coordinates)}/>
-        </p>
+        </p> */}
         <h3 className='card-text'>
             {concert.attendees !== undefined ? concert.attendees.length : 0}{' '}
             signed up

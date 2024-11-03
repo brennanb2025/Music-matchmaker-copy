@@ -1,4 +1,5 @@
 import React from 'react';
+import { dateFormat, timeFormat } from '../utilities/jsFunctions';
 
 const ConcertInfo = ({ concertInfo, userData }) => {
   return (
@@ -13,12 +14,11 @@ const ConcertInfo = ({ concertInfo, userData }) => {
             />
             <div className='card-body'>
               <h5 className='card-title'>{concertInfo.name}</h5>
-              <p className='card-text'>Date: {concertInfo.date}</p>
+              <p className="card-text">{dateFormat(concertInfo.date)}, {timeFormat(concertInfo.time)}</p>
               <p className='card-text'>
                 Location: {concertInfo.location.venue}
               </p>
-              <p className='card-text'>Time: {concertInfo.time}</p>
-              <p className='card-text'>Genre: {concertInfo.genre.join(', ')}</p>
+              <p className='card-text'>Genres: {concertInfo.genre.join(', ')}</p>
             </div>
           </div>
         </div>

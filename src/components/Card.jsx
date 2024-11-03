@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import '../data/sample.json';
 import { useAuthState, useDbUpdate, useDbData } from '../utilities/firebase';
 import { dateFormat, timeFormat } from '../utilities/jsFunctions';
+import { Link } from "react-router-dom";
 
 const Card = ({ user, concert, cid, toggleSelectedConcert }) => {
   concert.attendees = concert.attendees !== undefined ? concert.attendees : [];
@@ -41,18 +42,26 @@ const Card = ({ user, concert, cid, toggleSelectedConcert }) => {
 
   return (
     <div className='card m-1 p-2'>
-      <img
-        src={concert.image && concert.image.url ? concert.image.url : 'defaultImageURL'} // Replace 'defaultImageURL' with the path to your default image.
-        className='card-img-top'
-        alt={concert.name}
-      />
+      {user && user.uid && isUserSignedUp ? (
+        <Link to={`/chat/${concert.cid+1}`}>
+          <img
+            src={concert.image && concert.image.url ? concert.image.url : 'defaultImageURL'}
+            className='card-img-top'
+            alt={concert.name}
+          />
+        </Link>
+      ) : (
+        <img
+          src={concert.image && concert.image.url ? concert.image.url : 'defaultImageURL'}
+          className='card-img-top'
+          alt={concert.name}
+        />
+      )}
+  
       <div className="card-body">
         <h5 className="card-title">{concert.name}</h5>
-        <p className="card-text">{dateFormat(concert.date)}</p>
-        <p className="card-text">{timeFormat(concert.time)}</p>
-        <p className="card-text">{concert.location.venue} 
-          <img src="/GoogleMaps-Icon.webp" className="map-icon" alt="image" onClick={() => toggleSelectedConcert(concert.location.coordinates)}/>
-        </p>
+        <p className="card-text">{dateFormat(concert.date)}, {timeFormat(concert.time)}</p>
+        <p className="card-text">{concert.location.venue}</p>
         <p className='card-text'>
           {concert.attendees.length === 0
             ? 'No one signed up yet'

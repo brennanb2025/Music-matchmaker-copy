@@ -35,15 +35,13 @@ const ButtonBar = ({ message, disabled }) => {
   );
 };
 
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const validateCourseData = (key, val) => {
   switch (key) {
     case "name":
       return isValidName(val) ? "" : "Please enter a valid full name.";
     case "email":
-      return val.endsWith("@u.northwestern.edu") ||
-        val.endsWith("@northwestern.edu")
-        ? ""
-        : "Please enter a valid NU email.";
+      return emailPattern.test(val) ? "" : "Please enter a valid email address."
     case "phone":
       return isValidPhoneNumber(val)
         ? ""

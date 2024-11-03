@@ -36,8 +36,8 @@ def transform_json(input_json, index):
 def process_pages(output_file):
     transformed_events = {}
 
-    # Loop through page files from page1.json to page4.json
-    for page_number in range(1, 5):
+    # Loop through page files from page1.json to page10.json
+    for page_number in range(1, 11):
         page_file = f'page{page_number}.json'
 
         with open(page_file, 'r') as infile:
@@ -65,7 +65,7 @@ def process_pages(output_file):
         json.dump(sorted_events_dict, outfile, indent=4)
 
 # Output file path
-output_file_path = 'output.json'  # Replace with your output file path
+output_file_path = 'outputNew.json'  # Replace with your output file path
 
 # Process all page files and write the output to output.json
 process_pages(output_file_path)

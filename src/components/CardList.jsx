@@ -111,7 +111,7 @@ const CardList = ({ user, concerts }) => {
 
       <div className='post-concert-button'>
         <Link to='/postpage' className='post-concert-button'>
-          <button className='btn btn-secondary mt-3'>Post a concert</button>
+          <button className='btn btn-secondary mt-3'>Don't see the one you're looking for? Post it!</button>
         </Link>
       </div>
 
